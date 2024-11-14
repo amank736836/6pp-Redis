@@ -10,7 +10,7 @@ export const client = createClient({
   password: process.env.REDIS_PASSWORD,
   socket: {
     host: process.env.REDIS_HOST,
-    port: 14966,
+    port: Number(process.env.REDIS_PORT),
   },
 });
 
@@ -31,7 +31,7 @@ const runRedis = async () => {
   await sortedSet();
   await hashes();
 
-  // Delete everything
+  // // Delete everything
   //  const res = await client.flushAll();
   //  console.log(res);
 
