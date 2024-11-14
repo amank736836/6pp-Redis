@@ -1,0 +1,25 @@
+{
+  "name": "redis",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build-commands": "tsc",
+    "watch-commands": "tsc -w -p ./redis-commands/tsconfig.json",
+    "start-commands": "node -r dotenv/config redis-commands/dist/index.js",
+    "dev-commands": "nodemon -r dotenv/config redis-commands/dist/index.js",
+    "dev2-commands": "npx tsx watch redis-commands/src/index.ts",
+    "start-server": "node -r dotenv/config ./redis-demo/server/app.js",
+    "dev-server": "nodemon -r dotenv/config ./redis-demo/server/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "redis": "^4.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.9"
+  }
+}
